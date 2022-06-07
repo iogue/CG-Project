@@ -50,12 +50,18 @@ py CG-Project.py
 
 # Controlos
  - Rato mexe a câmara;
- -	Tecla esquerda do rato dispara;
- -	Tecla F reposiciona a câmara para a sua posição inicial;
- -	Teclas F1, F2 e F3 dão-nos uma visão panorâmica dos alvos;
- -	Tecla ESC sai do jogo a qualquer momento;
- -	Tecla ENTER quando solicitada, avança para o próximo ecrã;
- -	Tecla R quando solicitada, reinicia o jogo.
+ - Tecla esquerda do rato dispara;
+ - Tecla F reposiciona a câmara para a sua posição inicial;
+ - Teclas F1, F2 e F3 dão-nos uma visão panorâmica dos alvos;
+ - Tecla ESC sai do jogo a qualquer momento;
+ - Tecla ENTER quando solicitada, avança para o próximo ecrã;
+ - Tecla R quando solicitada, reinicia o jogo.
+
+<br>
+
+# Notas Importantes
+- Pode acontecer que as teclas F1, F2 e F3 não funcionem devido ao teclado.<br>
+- Existem 2 ficheiros, um que contêm iluminação e outro que não. Decidimos fazer isto devido aos fps demasiado baixos na versão com iluminação.
 
 <br>
 
