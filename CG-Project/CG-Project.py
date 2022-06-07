@@ -1049,8 +1049,6 @@ class Example(Base):
         self.target[10].translate(0.9, 0.3, -0.05)
         self.target[11].translate(0.9, 0.3, -0.05)
 
-
-
         self.tripe = []
         self.tripe.append(TripeMesh())
         self.tripe.append(TripeMesh())
