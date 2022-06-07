@@ -21,17 +21,11 @@ class MovementCamera(Object3D):
         self._degrees_per_second = degrees_per_second
         self.initial = self._look_attachment.local_matrix
 
-        # Customizable key mappings.
-        # Defaults: W, A, S, D, R, F (move), Q, E (turn), T, G (look)
-        # self.MAIN_PAGE = "z"
-        # self.INSTRUCTIONS = "2"
-        # self.WINNING = "3"
-        # self.GAMEOVER = "4"
-        # self.GAME = "5"
         self.RESTART = "r"
         self.CONTINUE = "return"
         self.LEFT = "f1"
-        self.RIGHT = "f2"
+        self.CENTER = "f2"
+        self.RIGHT = "f3"
         self.isGame = False
         self.level = 0
 
@@ -76,35 +70,135 @@ class MovementCamera(Object3D):
             self.isGame = True
             self.set_position([0,0,0])
         
-        if input_object.is_key_down(self.LEFT) and level != 6 and level != 0:
+        #NIVEL 1
+        if input_object.is_key_down(self.CENTER) and level == 1:
             self.isGame = False
-            self.rotate_y(-math.pi/6)
-        if input_object.is_key_pressed(self.LEFT) and level != 6 and level != 0:
+        if input_object.is_key_pressed(self.CENTER) and level == 1:
             self.isGame = False
-            self.set_position([0,0,-15])
-        if input_object.is_key_up(self.LEFT) and level != 6 and level != 0:
+            self.set_position([0.7,-1.5,-15])
+        if input_object.is_key_up(self.CENTER) and level == 1:
             self.isGame = True
             self.set_position([0,0,0])
-            self.rotate_y(math.pi/6)
-        if input_object.is_key_down(self.RIGHT) and level != 6 and level != 0:
+        #===============================
+
+        #NIVEL 2
+        if input_object.is_key_down(self.LEFT) and level == 2:
             self.isGame = False
-            self.rotate_y(math.pi/6)
-        if input_object.is_key_pressed(self.RIGHT) and level != 6 and level != 0:
+            self.rotate_y(math.pi/2)
+        if input_object.is_key_pressed(self.LEFT) and level == 2:
             self.isGame = False
-            self.set_position([0,0,-15])
-        if input_object.is_key_up(self.RIGHT) and level != 6 and level != 0:
+            self.set_position([-10,-1.5,-15])
+        if input_object.is_key_up(self.LEFT) and level == 2:
             self.isGame = True
             self.set_position([0,0,0])
-            self.rotate_y(-math.pi/6)
-        # if input_object.is_key_pressed(self.INSTRUCTIONS):
-        #     self.isGame = False
-        #     self.set_position([7.5,0,81])
-        # if input_object.is_key_pressed(self.GAMEOVER):
-        #     self.isGame = False
-        #     self.set_position([5,0,80.75])
-        # if input_object.is_key_pressed(self.WINNING):
-        #     self.isGame = False
-        #     self.set_position([2.5,0,80.75])
-        # if input_object.is_key_pressed(self.GAME):
-        #     self.isGame = True
-        #     self.set_position([0,0,0])
+            self.rotate_y(-math.pi/2)
+
+        if input_object.is_key_down(self.RIGHT) and level == 2:
+            self.isGame = False
+            self.rotate_y(-math.pi/2)
+        if input_object.is_key_pressed(self.RIGHT) and level == 2:
+            self.isGame = False
+            self.set_position([15,-1.5,-10])
+        if input_object.is_key_up(self.RIGHT) and level == 2:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(math.pi/2)
+        #=======================================
+
+        #NIVEL 3
+        if input_object.is_key_down(self.LEFT) and level == 3:
+            self.isGame = False
+            self.rotate_y(math.pi/2)
+        if input_object.is_key_pressed(self.LEFT) and level == 3:
+            self.isGame = False
+            self.set_position([-15,0,-18])
+        if input_object.is_key_up(self.LEFT) and level == 3:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(-math.pi/2)
+
+        if input_object.is_key_down(self.CENTER) and level == 3:
+            self.isGame = False
+        if input_object.is_key_pressed(self.CENTER) and level == 3:
+            self.isGame = False
+            self.set_position([5,0,-20])
+        if input_object.is_key_up(self.CENTER) and level == 3:
+            self.isGame = True
+            self.set_position([0,0,0])
+
+        if input_object.is_key_down(self.RIGHT) and level == 3:
+            self.isGame = False
+            self.rotate_y(-math.pi/2)
+        if input_object.is_key_pressed(self.RIGHT) and level == 3:
+            self.isGame = False
+            self.set_position([5,0,-18])
+        if input_object.is_key_up(self.RIGHT) and level == 3:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(math.pi/2)
+        #=======================================
+
+        #NIVEL 4
+        if input_object.is_key_down(self.LEFT) and level == 4:
+            self.isGame = False
+            self.rotate_y(math.pi/2)
+        if input_object.is_key_pressed(self.LEFT) and level == 4:
+            self.isGame = False
+            self.set_position([-18,-1.5,-15])
+        if input_object.is_key_up(self.LEFT) and level == 4:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(-math.pi/2)
+
+        if input_object.is_key_down(self.CENTER) and level == 4:
+            self.isGame = False
+        if input_object.is_key_pressed(self.CENTER) and level == 4:
+            self.isGame = False
+            self.set_position([0,-1.5,-15])
+        if input_object.is_key_up(self.CENTER) and level == 4:
+            self.isGame = True
+            self.set_position([0,0,0])
+
+        if input_object.is_key_down(self.RIGHT) and level == 4:
+            self.isGame = False
+            self.rotate_y(-math.pi/2)
+        if input_object.is_key_pressed(self.RIGHT) and level == 4:
+            self.isGame = False
+            self.set_position([13,-1.5,-20])
+        if input_object.is_key_up(self.RIGHT) and level == 4:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(math.pi/2)
+        #=======================================
+
+        #NIVEL 5
+        if input_object.is_key_down(self.LEFT) and level == 5:
+            self.isGame = False
+            self.rotate_y(math.pi/2)
+        if input_object.is_key_pressed(self.LEFT) and level == 5:
+            self.isGame = False
+            self.set_position([-5,-1.5,5])
+        if input_object.is_key_up(self.LEFT) and level == 5:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(-math.pi/2)
+
+        if input_object.is_key_down(self.CENTER) and level == 5:
+            self.isGame = False
+        if input_object.is_key_pressed(self.CENTER) and level == 5:
+            self.isGame = False
+            self.set_position([0.7,-1.5,-22])
+        if input_object.is_key_up(self.CENTER) and level == 5:
+            self.isGame = True
+            self.set_position([0,0,0])
+
+        if input_object.is_key_down(self.RIGHT) and level == 5:
+            self.isGame = False
+            self.rotate_y(-math.pi/2)
+        if input_object.is_key_pressed(self.RIGHT) and level == 5:
+            self.isGame = False
+            self.set_position([10,-1.5,-12])
+        if input_object.is_key_up(self.RIGHT) and level == 5:
+            self.isGame = True
+            self.set_position([0,0,0])
+            self.rotate_y(math.pi/2)
